@@ -1,3 +1,39 @@
     * {
         text-align: center;
     }
+    body {
+        background-image: url('https://m.supervasco.com/wallpaper/gerar-imagem/?url=https://media.supervasco.com/wallpapper/2020/08/gigante-da-colina-ii.png');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-attachment: fixed; 
+       color: white;
+      }
+      
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 64px;
+        color: white;
+    }
+
+    .sobre {
+        width: 50%;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+    }
+
+    .jogos {
+        font-size: 32px;
+    }
+
+    .jogos h2 {
+        color: red
+    }
+    
