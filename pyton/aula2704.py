@@ -1,47 +1,4 @@
 '''
-#1 
-nPares = 0
-somaPares = 0
-for i in range(1,501) :
-    if i % 2 == 0 :
-        nPares = nPares + 1
-        somaPares = somaPares + i
-print(f'Existe {nPares} números pares entre 0 e 500.')
-print(f'Soma de todos os números pares é {somaPares}.')
-
-#2
-somaImpares = 0
-for i in range(1,11) :
-    if i % 2 != 0 :
-        somaImpares = somaImpares + i
-print(f'Soma de todos os números ímpares é {somaImpares}.')
-
-#3
-nInicial = int(input('Digite valor inicial: '))
-nFinal = int(input('Digite valor final: '))
-somaFinal = 0
-for i in range(nInicial,nFinal+1) :
-    if i % 3 == 0 :
-        somaFinal = somaFinal + i
-print(f'Soma de todos os multiplos de 3 dos valores que você colocou é {somaFinal}.')
-
-#4
-t = int(input('Informe a tabuada desejada: '))
-for i in range(1,11) :
-    r = t * 1
-    print(f'{t} x {i} = {r} ')
-
-#5
-t = int(input('Qual tabuada você deseja fazer: '))
-nInicial = int(input('Digite valor inicial: '))
-nFinal = int(input('Digite valor final: '))
-
-for i in range(nInicial,nFinal+1) :
-    r = t * i
-    print(f'{t} x {i} = {r}')
-
-#OUTRA LISTAAAA
-#1
 maior = 0
 menor = 1000
 for i in range(1,6) :
@@ -62,15 +19,15 @@ for i in range(100,200) :
 
 #3
 
-f = int(input('Digite um valor: '))
-count = 0;
-for i in range(f,1, -1) :
-    if(i == f) :
-        count = i * (i-1)
-    else: 
-      count = count * (i-1)
+    f = int(input('Digite um valor: '))
+    count = 0;
+    for i in range(f,1, -1) :
+        if(i == f) :
+            count = i * (i-1)
+        else: 
+        count = count * (i-1)
 
-print(f'Resultado de {f}! = {count}')
+    print(f'Resultado de {f}! = {count}')
 
 #4
 nNegativos = 0
@@ -80,5 +37,54 @@ for i in range(1,6) :
         nNegativos +=1
 
 print(f'Tem {nNegativos} números negativos')
-'''
+
 #5
+cand1 = 0
+cand2 = 0
+cand3 = 0
+cand4 = 0
+cand5 = 0
+cand6 = 0
+for i in range(1,100+1) :
+    voto = int(input('1 á 4 para Candidatos,5 para nulos e 6 para voto em branco\n---------------\nInsira seu voto: '))
+    if voto == 1 :
+        cand1 += 1
+    elif voto == 2 :
+        cand2 += 1
+    elif voto == 3 :
+        cand3 += 1
+    elif voto == 4 :
+        cand4 += 1
+    elif voto == 5 :
+        cand5 += 1
+    elif voto == 6 :
+        cand6 += 1
+    else :
+        print('Valor invalido!')
+
+print('Apuração do voto\n------------------------')
+
+print(f'Candidato 1: {cand1}\nCandidato 2: {cand2}\nCandidato 3: {cand3}\nCandidato 4: {cand4}\nNulos: {cand5}\nBranco: {cand6}')
+#6  
+
+nome = input('Digite seu nome: ')
+tamanho =  len(nome)
+contador = 0
+
+for letra in nome :
+    contador+=1
+
+print(f'Forma len: Seu nome tem {tamanho} letras. ')   
+print(f'Percorrendo lista: Seu nome tem {contador} letras. ')   
+
+
+#7
+nome = input('Digite seu nome: ')
+print(f'Vertical:')
+
+for letra in nome :
+    print(letra)
+
+
+print(f'Horizontal - {nome}')
+'''
