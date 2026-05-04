@@ -66,17 +66,16 @@ print('Apuração do voto\n------------------------')
 
 print(f'Candidato 1: {cand1}\nCandidato 2: {cand2}\nCandidato 3: {cand3}\nCandidato 4: {cand4}\nNulos: {cand5}\nBranco: {cand6}')
 #6  
-
 nome = input('Digite seu nome: ')
 tamanho =  len(nome)
 contador = 0
 
 for letra in nome :
-    contador+=1
+    if letra != ' ' :
+        contador+=1
 
 print(f'Forma len: Seu nome tem {tamanho} letras. ')   
-print(f'Percorrendo lista: Seu nome tem {contador} letras. ')   
-
+print(f'Percorrendo lista: Seu nome tem {contador} letras. ')   Percorrendo lista: Seu nome tem {contador} letras. ')    
 
 #7
 nome = input('Digite seu nome: ')
