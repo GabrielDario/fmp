@@ -92,4 +92,28 @@ print(f'Números no intervalo de [0...25] = {int1}')
 print(f'Números no intervalo de [26...50] = {int2}')
 print(f'Números no intervalo de [51...75] = {int3}')
 print(f'Números no intervalo de [76...10] = {int4}')
+
+#3
+i = 1;
+somatorioNegativo = 0;
+while i < 11 :
+       n = int(input(f'informe o {i}º número: '))
+       if n < 0:
+              somatorioNegativo = somatorioNegativo + n
+       i = i+1
+print(f'Somatório dos negativos total = {somatorioNegativo}')
+
+#3
+chico = 1.5 #2 cm por ano
+juca = 1.10 #3cm por ano
+ano = 0
+while chico > juca :
+    chico = chico + 0.02
+    juca = juca + 0.03
+    difereca = chico - juca
+    print(f'Altura do chico: {round(chico,2)} m e do juca {round(juca,2)}m, faltam {round(difereca,2)} m')
+    ano= ano +1
+
+print(f'Serão necessário {ano} anos para Juca ser mais alto que o Chico')
 '''
+#4

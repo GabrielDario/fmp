@@ -45,7 +45,7 @@
 
     /* HEADER */
     header {
-      background: rgba(245, 73, 39, 0.5);
+      background: rgba(245, 0, 0, 0.5);
       padding: 20px;
       display: flex;
       align-items: center;
