@@ -112,7 +112,6 @@ while populacao < 3:
                 tem_letra = False
 
     altura = float(altura)
-        
 
     if populacao == 0:
         maiorAltura = altura
@@ -150,16 +149,13 @@ print(f'Média altura das mulheres {round(mediaAlturaMulher,2)} m')
 print(f'Média altura da população {round(mediaAlturaPopulacao,2)} m')
 print(f'Percentual masculino na populacão {round(percentualHomens,2)} %')
 
-
 #5
-
 limiteInferior = int(input("Limite Inferior: "))
 limiteSuperior = int(input("Limite Superior: "))
 print("---------------")
 inicio = limiteInferior
 numeroAtual = None
 soma = 0
-
 
 print(f'Limite inferior: {limiteInferior}')
 print(f'Limite superior: {limiteSuperior}')
@@ -172,8 +168,6 @@ while inicio < limiteSuperior:
 
     inicio = inicio + 1
 print(f'Soma:', soma)
-'''
-'''
 #6
 qnt = int(input("Quantos números você quer botar: "))
 soma = 0
@@ -186,4 +180,34 @@ while inicio < qnt:
     inicio = inicio +1
 
 print(f'Soma desses números: {soma}')
+
+#7
+qnt = int(input("Quantos usuário você quer botar a idade: "))
+somaMaiorIdade = 0
+mediaMaiorIdade = 0
+nMaiorDeIdade = 0
+idade = 0
+inicio = 0
+print("---------------")
+while inicio < qnt:
+    idade = int(input("Qual sua idade: "))
+    if idade >= 18 :
+       somaMaiorIdade = somaMaiorIdade + idade
+       nMaiorDeIdade = nMaiorDeIdade + 1
+    inicio = inicio + 1
+
+mediaMaiorIdade = somaMaiorIdade / nMaiorDeIdade
+print(f'Soma dos maiores de idade: {somaMaiorIdade}')
+print(f'Média dos maiores de idade: {mediaMaiorIdade}')
+#8
+numerador = 1
+denominador = 1
+soma = 0
+
+n = int(input("Digite um número inteiro e positivo: "))
+
+for denominador in range(1,n+1):
+   soma = soma + (numerador / denominador)
+   denominador = denominador + 1
+print(f"A soma disso é: {round(soma,2)}")
 '''
