@@ -1,50 +1,57 @@
 '''
 # LISTA 3 AULA 14
 #1
-mS = 0
-mF = 0
-maiorS =0
-pS = 0
-p = 1
-per = 0
-s = None
-f = None
-o = None
-while o != 0:
-    o = int(input(f'Digite 0 para encerrar ou 1 para continuar: '))
-    if o == 0: 
-        break
-    
+mediaSalarial = 0
+mediaFilhos = 0
+maiorSalario =0
+pessoa = 1
+percentualSalario100 = 0
+salario = 0
+filho = 0
 
+try:
+    salario = int(input(f'Qual salário da pessoa {pessoa}: '))
+except ValueError:
+    print('ERRO! VALOR INVALIDO')
+while salario > 0:
+    if pessoa == 1 :
+        filho = int(input(f'Quantos filhos a pessoa {pessoa} tem: '))
+        while filho < 0:
+            print("VALOR INVÁLIDO DE FILHOS!")
+            filho = int(input(f'Quantos filhos a pessoa {pessoa} tem: '))
+            
+    else:
+        salario = int(input(f'Qual salário da pessoa {pessoa}: '))
+        if salario < 0:
+            break
+        filho = int(input(f'Quantos filhos a pessoa {pessoa} tem: '))
     
-    s = int(input(f'Qual salário da pessoa {p}: '))
-    f = int(input(f'Quantos filhos a pessoa {p} tem: '))
+    if salario > maiorSalario:
+        maiorSalario = salario
     
-    if s > maiorS:
-        maiorS = s
-    
-    if s <= 100:
-        per = per + 1
+    if salario <= 100:
+        percentualSalario100 = percentualSalario100 + 1
         
-    mS = s + mS
-    mF = f + mF
-    print(f'Pessoa {p}: Ganha R${s} com {f} filhos.')
-    p = p+1
+    mediaSalarial = salario + mediaSalarial
+    mediaFilhos = filho + mediaFilhos
+    pessoa = pessoa+1
     print('-------------------------')
-
-
-mS = mS / (p-1)
-mF = mF / (p-1)
-per = (per / (p-1)) * 100
+   
+if mediaSalarial == 0 :
+    mediaSalarial = 0
+    mediaFilhos = 0
+    percentualSalario100 = 0
+else:
+    mediaSalarial = mediaSalarial / (pessoa-1)
+    mediaFilhos = mediaFilhos / (pessoa-1)
+    percentualSalario100 = (percentualSalario100 / (pessoa-1)) * 100
 
 print('--------------------------------')
 print('ESTATISTICAS :')
-print(f'Média de salário: R${mS}')
-print(f'Média de filhos {round(mF,2)}')
-print(f'Maior salário: R$ {round(maiorS,2)}')
-print(f'Percentual de pessoas com salário até R$ 100,00: {per} %')
-
-
+print(f'Média de salário: R${mediaSalarial}')
+print(f'Média de filhos {round(mediaFilhos,2)}')
+print(f'Maior salário: R$ {round(maiorSalario,2)}')
+print(f'Percentual de pessoas com salário até R$ 100,00: {percentualSalario100} %')
 #2.1 SIMPLES - APENAS NUMERADOR PULANDO DE DOIS EM DOIS
 numerador = 1
 denominador = 1
@@ -89,7 +96,7 @@ altura = None
 sexo = None
 tem_letra = False
 
-while populacao < 3:
+while populacao < 50:
     print(f'Cidadão {populacao+1}:')
     print('--------------------------')
     sexo = int(input(f'Qual sexo:(0)Para masculino ou (1)para feminino: '))
@@ -168,6 +175,7 @@ while inicio < limiteSuperior:
 
     inicio = inicio + 1
 print(f'Soma:', soma)
+
 #6
 qnt = int(input("Quantos números você quer botar: "))
 soma = 0
@@ -199,6 +207,7 @@ while inicio < qnt:
 mediaMaiorIdade = somaMaiorIdade / nMaiorDeIdade
 print(f'Soma dos maiores de idade: {somaMaiorIdade}')
 print(f'Média dos maiores de idade: {mediaMaiorIdade}')
+
 #8
 numerador = 1
 denominador = 1
