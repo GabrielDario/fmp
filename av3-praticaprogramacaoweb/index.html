@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoneyShare</title>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <section id="auth-screen" class="screen active">
+    <div class="card">
+      <h1>💸 MoneyShare 💸</h1>
+      <h2>Logar</h2>
+
+      <input type="email" id="email" placeholder="E-mail">
+      <input type="password" id="password" placeholder="Senha">
+
+      <button id="login-btn">Entrar / Cadastrar</button>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard-screen" class="screen">
+    <div class="container">
+      <div class="top-bar">
+        <h2>Minhas Salas</h2>
+        <button id="logout-btn">Sair</button>
+      </div>
+
+      <div class="card">
+        <h3>Criar Nova Sala</h3>
+
+        <input type="text" id="room-name" placeholder="Nome da sala">
+
+        <button id="create-room-btn">Criar Sala</button>
+      </div>
+
+      <div id="rooms-list" class="rooms-grid"></div>
+    </div>
+  </section>
+
+  <!-- SALA -->
+  <section id="room-screen" class="screen">
+    <div class="container">
+
+      <div class="top-bar">
+        <button id="back-btn">⬅ Voltar</button>
+        <h2 id="room-title"></h2>
+      </div>
+
+      <div class="card">
+        <h3>Participantes</h3>
+
+        <div class="participant-form">
+          <input type="text" id="participant-name" placeholder="Nome do participante">
+          <button id="add-participant-btn">Adicionar</button>
+        </div>
+
+        <ul id="participants-list"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Nova Despesa</h3>
+
+        <input type="text" id="expense-description" placeholder="Descrição">
+
+        <input type="number" id="expense-value" placeholder="Valor">
+
+        <select id="expense-paid-by"></select>
+
+        <button id="add-expense-btn">Adicionar Despesa</button>
+      </div>
+
+      <div class="card">
+        <h3>Histórico</h3>
+        <ul id="expenses-list"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Resumo Final</h3>
+        <div id="summary"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
