@@ -1,6 +1,6 @@
 ###Gabriel Dario da Rosa
+#OPÇÃO 1 - LANCHONETE
 
-import os
 
 num_mesas = []       
 produtos_lista = []    
@@ -9,7 +9,6 @@ total_atendimentos = 0
 extrato_geral = 0.0
 
 
-# Configurações do Estabelecimento
 tipo_estab = ""
 artigo = ""
 nome_estab = ""
@@ -18,8 +17,8 @@ def qnt_mesas():
     global tipo_estab, artigo, nome_estab, num_mesas
     
     print("\n--- PERSONALIZE SEU ESTABELECIMENTO ---")
-    tipo_estab = input("Tipo de estabelecimento (ex: Lanchonete, Restaurante...): ").strip()
-    artigo = input("Artigo (ex: do, da): ").strip()
+    tipo_estab = input("Tipo de estabelecimento (ex: Lanchonete, Restaurante...): ")
+    artigo = input("Artigo (ex: do, da): ")
     nome_estab = input("Nome do estabelecimento: ").strip()
     
     while True:
@@ -27,7 +26,7 @@ def qnt_mesas():
             qnt = int(input("Digite a quantidade de mesas (Entre 1 e 50): "))
             if 0 < qnt <= 50 and tipo_estab != "" and nome_estab != "":
                 
-                num_mesas = [[] for _ in range(qnt)]
+                num_mesas = [[] for _ in range(qnt)] #COMPRIMIR,_ UNITIL
                 print(f"\n{tipo_estab} {artigo} {nome_estab} configurado com sucesso!")
                 break
             else:
@@ -67,7 +66,7 @@ def conferir_mesas():
         print("Nenhuma mesa configurada ainda.")
         return
 
-    for i, mesa in enumerate(num_mesas):
+    for i, mesa in enumerate(num_mesas): #ENUMARATE DUAS INFIRMAÇOES JUNTAS
         
         if len(mesa) > 0:
          status = "[Ocupada]"
@@ -89,7 +88,6 @@ def lancar_produto():
         mesa_comandar = int(input("Deseja lançar em qual mesa? "))
         if 1 <= mesa_comandar <= len(num_mesas):
             
-            # Mostra os produtos disponíveis
             print("\n--- PRODUTOS DISPONÍVEIS ---")
             for idx, prod in enumerate(produtos_lista):
                 print(f"[{idx + 1}] {prod} - R$ {preco_lista[idx]:.2f}")
@@ -97,7 +95,6 @@ def lancar_produto():
             escolha_prod = int(input("Escolha o número do produto: ")) - 1
             
             if 0 <= escolha_prod < len(produtos_lista):
-                # Adiciona o preço do produto selecionado na lista daquela mesa
                 preco_do_produto = preco_lista[escolha_prod]
                 num_mesas[mesa_comandar - 1].append(preco_do_produto)
                 print(f"Sucesso: {produtos_lista[escolha_prod]} lançado na Mesa {mesa_comandar}!")
@@ -156,6 +153,7 @@ def fechar_mesa():
         print("[Erro] Digite um número válido.")
 
 def apagar_Item():
+    conferir_mesas()
     print("="*40)
     print("        APAGAR ITEM        ")
     try:
@@ -163,21 +161,17 @@ def apagar_Item():
         if 1 <= num_mesa <= len(num_mesas):
             mesa_index = num_mesa - 1
             
-            # Se a mesa estiver vazia, não há o que estornar
             if len(num_mesas[mesa_index]) == 0:
                 print("[Aviso] Esta mesa já está vazia. Nenhum item para remover.")
                 return
             
-            # Mostra os itens atuais para o usuário escolher qual tirar
             print(f"\n--- ITENS DA MESA {num_mesa} ---")
             for i, valor in enumerate(num_mesas[mesa_index]):
                 print(f"[{i + 1}] Lançamento de R$ {valor:.2f}")
             
             escolha = int(input("\nDigite o número do item que deseja CANCELAR/REMOVER: ")) - 1
             
-            # Verifica se o número escolhido é válido dentro da lista da mesa
             if 0 <= escolha < len(num_mesas[mesa_index]):
-                # .pop(escolha) remove o item daquela posição exata
                 valor_removido = num_mesas[mesa_index].pop(escolha)
                 print(f"\nSucesso: O lançamento de R$ {valor_removido:.2f} foi removido da Mesa {num_mesa}!")
             else:
@@ -192,7 +186,6 @@ def inf_geral():
     print("        CONTROLE FINANCEIRO        ")
     print(f"Valor bruto gerado: R$ {extrato_geral:.2f} Reais")
     
-    # Cálculo do Ticket Médio
     if total_atendimentos > 0:
         tm = extrato_geral / total_atendimentos
     else:
