@@ -132,8 +132,10 @@ def consultar_mesa():
 def fechar_mesa():
     global extrato_geral
     global total_atendimentos
+
+    conferir_mesas()
     try:
-        num_mesa = int(input("\nDigite o número da mesa que deseja FECHAR E PAGAR: "))
+        num_mesa = int(input("\nDigite o número da mesa OCUPADA que deseja fechar: "))
         if 1 <= num_mesa <= len(num_mesas):
             mesa_index = num_mesa - 1
             
