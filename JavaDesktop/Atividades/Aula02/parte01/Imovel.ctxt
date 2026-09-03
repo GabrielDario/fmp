@@ -1,0 +1,13 @@
+#BlueJ class context
+#Wed Sep 02 23:36:08 BRT 2026
+comment0.target=Imovel
+comment1.target=int getMetrosQuadrados()
+comment2.params=metrosQuadrados
+comment2.target=void setMetrosQuadrados(int)
+comment3.params=local metrosQuadrados
+comment3.target=Imovel(java.lang.String, int)
+comment4.target=java.lang.String getLocal()
+comment5.params=local
+comment5.target=void setLocal(java.lang.String)
+comment6.target=void apresentar()
+numComments=7

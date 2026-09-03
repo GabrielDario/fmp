@@ -1,0 +1,13 @@
+#BlueJ class context
+#Wed Sep 02 23:36:11 BRT 2026
+comment0.target=Computador
+comment1.target=java.lang.String getMarca()
+comment2.params=marca
+comment2.target=void setMarca(java.lang.String)
+comment3.target=int getAno()
+comment4.params=ano
+comment4.target=void setAno(int)
+comment5.params=marca ano
+comment5.target=Computador(java.lang.String, int)
+comment6.target=void apresentar()
+numComments=7

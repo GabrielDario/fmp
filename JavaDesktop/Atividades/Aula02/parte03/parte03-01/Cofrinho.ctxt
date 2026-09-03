@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Cofrinho
+comment1.params=dono
+comment1.target=Cofrinho(Pessoa)
+comment2.params=dono
+comment2.target=void\ setDono(Pessoa)
+comment3.params=
+comment3.target=Pessoa\ getDono()
+comment4.params=
+comment4.target=void\ depositaUmaMoedaDezCentavos()
+comment5.params=
+comment5.target=void\ depositaUmaMoedaVinteCincoCentavos()
+comment6.params=
+comment6.target=void\ depositaUmaMoedaCinquentaCentavos()
+comment7.params=
+comment7.target=double\ calculaTotal()
+numComments=8

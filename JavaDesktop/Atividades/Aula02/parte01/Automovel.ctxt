@@ -1,0 +1,13 @@
+#BlueJ class context
+#Wed Sep 02 23:36:10 BRT 2026
+comment0.target=Automovel
+comment1.params=marca ano
+comment1.target=Automovel(java.lang.String, int)
+comment2.target=java.lang.String getMarca()
+comment3.params=marca
+comment3.target=void setMarca(java.lang.String)
+comment4.target=int getAno()
+comment5.params=ano
+comment5.target=void setAno(int)
+comment6.target=void apresentar()
+numComments=7
