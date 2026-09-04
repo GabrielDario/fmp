@@ -1,0 +1,11 @@
+#BlueJ class context
+#Fri Sep 04 16:57:05 BRT 2026
+comment0.target=Imovel
+comment1.params=codigo descricao precoAluguel qtdMinimaMeses
+comment1.target=Imovel(int, java.lang.String, double, int)
+comment2.target=int getCodigo()
+comment3.target=java.lang.String getDescricao()
+comment4.target=double getPrecoAluguel()
+comment5.target=int getQtdMinimaMeses()
+comment6.target=void exibeDados()
+numComments=7

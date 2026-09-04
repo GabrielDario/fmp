@@ -1,0 +1,10 @@
+#BlueJ class context
+#Fri Sep 04 16:53:59 BRT 2026
+comment0.target=Cliente
+comment1.params=codigo nome telefone
+comment1.target=Cliente(int, java.lang.String, java.lang.String)
+comment2.target=java.lang.String getNome()
+comment3.target=java.lang.String getTelefone()
+comment4.target=int getCodigo()
+comment5.target=void exibeDados()
+numComments=6

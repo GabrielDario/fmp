@@ -1,0 +1,18 @@
+#BlueJ class context
+#Fri Sep 04 16:22:26 BRT 2026
+comment0.target=Computador
+comment1.params=modelo capacidadeProcessador memoriaRam discoEnrigido
+comment1.target=Computador(java.lang.String, double, double, double)
+comment2.target=double getCapacidadeProcessador()
+comment3.params=capacidadeProcessador
+comment3.target=void setCapacidadeProcessador(double)
+comment4.target=java.lang.String getModelo()
+comment5.params=modelo
+comment5.target=void setModelo(java.lang.String)
+comment6.target=double getMemoriaRam()
+comment7.params=memoriaRam
+comment7.target=void setMemoriaRam(double)
+comment8.target=double getDiscoEnrigido()
+comment9.params=discoEnrigido
+comment9.target=void setDiscoEnrigido(double)
+numComments=10

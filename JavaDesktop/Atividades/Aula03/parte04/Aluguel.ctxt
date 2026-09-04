@@ -1,0 +1,12 @@
+#BlueJ class context
+#Fri Sep 04 16:57:00 BRT 2026
+comment0.target=Aluguel
+comment1.params=codigo dataInicio dataFim imovel cliente
+comment1.target=Aluguel(int, java.lang.String, java.lang.String, Imovel, Cliente)
+comment2.target=int getCodigo()
+comment3.target=java.lang.String getDataInicio()
+comment4.target=java.lang.String getDataFim()
+comment5.target=Imovel getImovel()
+comment6.target=Cliente getCliente()
+comment7.target=void exibeDados()
+numComments=8

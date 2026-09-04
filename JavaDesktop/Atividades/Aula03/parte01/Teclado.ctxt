@@ -1,0 +1,16 @@
+#BlueJ class context
+#Fri Sep 04 15:47:28 BRT 2026
+comment0.target=Teclado
+comment1.params=msg
+comment1.target=int leInt(java.lang.String)
+comment1.text=\r\n        L\u00EA um inteiro, exibindo na tela uma mensagem de solicita\u00E7\u00E3o.\r\n        @return int\r\n
+comment2.params=msg
+comment2.target=double leDouble(java.lang.String)
+comment2.text=\r\n        L\u00EA um double, exibindo na tela uma mensagem de solicita\u00E7\u00E3o.\r\n        @return double\r\n
+comment3.params=msg
+comment3.target=java.lang.String leString(java.lang.String)
+comment3.text=\r\n        L\u00EA um string, exibindo na tela uma mensagem de solicita\u00E7\u00E3o.\r\n        @return String\r\n
+comment4.params=msg
+comment4.target=java.lang.Character leChar(java.lang.String)
+comment4.text=\r\n        L\u00EA um caractere exibindo na tela uma mensagem de solicita\u00E7\u00E3o.\r\n        @return Char\r\n
+numComments=5
