@@ -1,0 +1,16 @@
+#BlueJ class context
+#Thu Sep 03 00:10:27 BRT 2026
+comment0.target=Pessoa
+comment1.params=nome cpf dataNascimento
+comment1.target=Pessoa(java.lang.String, java.lang.String, Data)
+comment2.target=void apresentar()
+comment3.target=java.lang.String getNome()
+comment4.params=nome
+comment4.target=void setNome(java.lang.String)
+comment5.target=java.lang.String getCpf()
+comment6.params=cpf
+comment6.target=void setCpf(java.lang.String)
+comment7.target=Data getDataNascimento()
+comment8.params=dataNascimento
+comment8.target=void setDataNascimento(Data)
+numComments=9

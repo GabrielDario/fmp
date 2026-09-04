@@ -1,0 +1,16 @@
+#BlueJ class context
+#Thu Sep 03 00:10:25 BRT 2026
+comment0.target=Data
+comment1.params=dia mes ano
+comment1.target=Data(int, int, int)
+comment2.target=java.lang.String formatar()
+comment3.target=int getDia()
+comment4.params=dia
+comment4.target=void setDia(int)
+comment5.target=int getMes()
+comment6.params=mes
+comment6.target=void setMes(int)
+comment7.target=int getAno()
+comment8.params=ano
+comment8.target=void setAno(int)
+numComments=9

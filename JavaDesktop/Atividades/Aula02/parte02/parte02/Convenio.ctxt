@@ -1,0 +1,17 @@
+#BlueJ class context
+#Thu Sep 03 00:10:24 BRT 2026
+comment0.target=Convenio
+comment1.params=nome registroAns telefone
+comment1.target=Convenio(java.lang.String, java.lang.String, java.lang.String)
+comment2.params=procedimento
+comment2.target=boolean autorizarProcedimento(java.lang.String)
+comment3.target=java.lang.String getNome()
+comment4.params=nome
+comment4.target=void setNome(java.lang.String)
+comment5.target=java.lang.String getRegistroAns()
+comment6.params=registroAns
+comment6.target=void setRegistroAns(java.lang.String)
+comment7.target=java.lang.String getTelefone()
+comment8.params=telefone
+comment8.target=void setTelefone(java.lang.String)
+numComments=9

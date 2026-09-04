@@ -1,12 +1,12 @@
 public class Pessoa {
 
-    public String nome;
-    public String cpf;
-    public Data dataNascimento;
+    private String nome;
+    private String cpf;
+    private Data dataNascimento;
 
     public Pessoa(String nome, String cpf, Data dataNascimento) {
-        this.cpf = cpf;
         this.nome = nome;
+        this.cpf = cpf;
         this.dataNascimento = dataNascimento;
     }
 

@@ -11,7 +11,9 @@ public class Convenio {
     }
 
     public boolean autorizarProcedimento(String procedimento) {
+
         System.out.println("Solicitando autorização para: " + procedimento);
+
         // Regra simples para o exemplo
         if (procedimento.equalsIgnoreCase("Consulta")) {
             return true;

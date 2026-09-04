@@ -8,7 +8,8 @@ public class Paciente extends Pessoa {
             String cpf,
             Data dataNascimento,
             String numeroProntuario,
-            Convenio convenio) { 
+            Convenio convenio) {
+
         super(nome, cpf, dataNascimento);
 
         this.numeroProntuario = numeroProntuario;
@@ -19,7 +20,8 @@ public class Paciente extends Pessoa {
 
         System.out.println("Agendando consulta para: " + data.formatar());
 
-        boolean autorizado = convenio.autorizarProcedimento("Consulta");
+        boolean autorizado =
+                convenio.autorizarProcedimento("Consulta");
 
         if (autorizado) {
             System.out.println("Consulta autorizada!");
@@ -29,16 +31,18 @@ public class Paciente extends Pessoa {
         }
     }
 
+    @Override
     public void apresentar() {
         System.out.println("===== PACIENTE =====");
         System.out.println("Nome: " + getNome());
         System.out.println("CPF: " + getCpf());
-        
+        System.out.println(
+                "Data de nascimento: "
+                + getDataNascimento().formatar()
+        );
         System.out.println("Prontuário: " + numeroProntuario);
         System.out.println("Convênio: " + convenio.getNome());
     }
-
- 
 
     public String getNumeroProntuario() {
         return numeroProntuario;

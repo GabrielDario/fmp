@@ -1,0 +1,15 @@
+#BlueJ class context
+#Fri Sep 04 14:34:29 BRT 2026
+comment0.target=Paciente
+comment1.params=nome cpf dataNascimento numeroProntuario convenio
+comment1.target=Paciente(java.lang.String, java.lang.String, Data, java.lang.String, Convenio)
+comment2.params=data
+comment2.target=void agendarConsulta(Data)
+comment3.target=void apresentar()
+comment4.target=java.lang.String getNumeroProntuario()
+comment5.params=numeroProntuario
+comment5.target=void setNumeroProntuario(java.lang.String)
+comment6.target=Convenio getConvenio()
+comment7.params=convenio
+comment7.target=void setConvenio(Convenio)
+numComments=8
