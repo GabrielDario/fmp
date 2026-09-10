@@ -1,0 +1,6 @@
+#BlueJ class context
+#Thu Sep 10 16:20:42 BRT 2026
+comment0.target=Autenticavel
+comment1.params=login senha
+comment1.target=boolean autenticar(java.lang.String, java.lang.String)
+numComments=2

@@ -1,0 +1,21 @@
+#BlueJ class context
+#Thu Sep 10 16:20:42 BRT 2026
+comment0.target=Usuario
+comment1.params=matricula nome login senha
+comment1.target=Usuario(int, java.lang.String, java.lang.String, java.lang.String)
+comment10.params=login senha
+comment10.target=boolean autenticar(java.lang.String, java.lang.String)
+comment11.target=void exibeDados()
+comment2.target=int getMatricula()
+comment3.params=matricula
+comment3.target=void setMatricula(int)
+comment4.target=java.lang.String getNome()
+comment5.params=nome
+comment5.target=void setNome(java.lang.String)
+comment6.target=java.lang.String getLogin()
+comment7.params=login
+comment7.target=void setLogin(java.lang.String)
+comment8.target=java.lang.String getSenha()
+comment9.params=senha
+comment9.target=void setSenha(java.lang.String)
+numComments=12

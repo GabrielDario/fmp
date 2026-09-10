@@ -1,0 +1,14 @@
+#BlueJ class context
+#Thu Sep 10 16:20:42 BRT 2026
+comment0.target=Aluno
+comment1.params=mat nom log sen
+comment1.target=Aluno(int, java.lang.String, java.lang.String, java.lang.String)
+comment2.target=double getAv1()
+comment3.params=nota
+comment3.target=void setAv1(double)
+comment4.target=double getAv2()
+comment5.params=nota
+comment5.target=void setAv2(double)
+comment6.target=double calcularMedia()
+comment7.target=void exibeDados()
+numComments=8
