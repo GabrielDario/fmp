@@ -1,0 +1,93 @@
+CREATE DATABASE gestao_frota;
+USE gestao_frota;
+
+-- =========================================
+CREATE TABLE Motorista (
+    id_motorista INT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    telefone VARCHAR(20),
+    data_cadastro DATE,
+    status VARCHAR(30)
+);
+
+-- =========================================
+CREATE TABLE Veiculo (
+    id_veiculo INT PRIMARY KEY,
+    placa VARCHAR(10) NOT NULL UNIQUE,
+    modelo VARCHAR(100),
+    ano INT,
+    tipo VARCHAR(50),
+    status VARCHAR(30),
+
+    id_motorista INT NOT NULL,
+
+    CONSTRAINT fk_veiculo_motorista
+        FOREIGN KEY (id_motorista)
+        REFERENCES Motorista(id_motorista)
+);
+-- ===============================
+CREATE TABLE Aplicativo (
+id_cliente INT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+cpf_cnpj VARCHAR(18),
+telefone_cliente VARCHAR(20),
+endereco_cliente VARCHAR(200),
+data_cadastro DATE
+);
+-- ===============================
+CREATE TABLE Aplicativo (
+id_aplicativo INT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+ versao VARCHAR(20),
+status VARCHAR(30)
+);
+-- ================================
+CREATE TABLE Pedido (
+id_pedido INT PRIMARY KEY,
+data_hora DATETIME,
+endereco_entrega VARCHAR(200),
+ valor DECIMAL(10,2),
+status VARCHAR(30),
+id_cliente INT NOT NULL,
+id_veiculo INT NOT NULL,
+ CONSTRAINT fk_pedido_cliente
+FOREIGN KEY (id_cliente)
+REFERENCES Cliente(id_cliente),
+ CONSTRAINT fk_pedido_veiculo
+FOREIGN KEY (id_veiculo)
+REFERENCES Veiculo(id_veiculo)
+);
+-- ====================================
+
+CREATE TABLE Viagem (
+id_viagem INT PRIMARY KEY,
+data_hora_inicio DATETIME,
+data_hora_fim DATETIME,
+distancia_km DECIMAL(10,2),
+status VARCHAR(30),
+id_motorista INT NOT NULL,
+id_veiculo INT NOT NULL,
+ CONSTRAINT fk_viagem_motorista
+FOREIGN KEY (id_motorista)
+REFERENCES Motorista(id_motorista),
+ CONSTRAINT fk_viagem_veiculo
+FOREIGN KEY (id_veiculo)
+REFERENCES Veiculo(id_veiculo)
+);
+-- ====================================
+CREATE TABLE Entrega (
+id_entrega INT PRIMARY KEY,
+data_hora DATETIME,
+ valor_frente DECIMAL(10,2),
+distancia_km DECIMAL(10,2),
+status VARCHAR(30),
+id_viagem INT NOT NULL,
+id_aplicativo INT NOT NULL,
+ CONSTRAINT fk_entrega_viagem
+FOREIGN KEY (id_viagem)
+REFERENCES Viagem(id_viagem),
+ CONSTRAINT fk_entrega_aplicativo
+FOREIGN KEY (id_aplicativo)
+REFERENCES Aplicativo(id_aplicativo)
+);
