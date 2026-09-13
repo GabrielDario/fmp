@@ -1,0 +1,14 @@
+#BlueJ class context
+#Sun Sep 13 18:49:40 BRT 2026
+comment0.target=ContaCorrente
+comment1.params=s
+comment1.target=ContaCorrente(double)
+comment2.params=valor
+comment2.target=void retirada(double)
+comment3.params=valor
+comment3.target=void deposito(double)
+comment4.params=valor parcelas
+comment4.target=void emprestimo(double, int)
+comment5.target=void consultaSaldo()
+comment6.target=void opcoes()
+numComments=7
