@@ -1,0 +1,8 @@
+#BlueJ class context
+#Sun Sep 13 17:26:30 BRT 2026
+comment0.target=Teste9
+comment1.params=args
+comment1.target=void main(java.lang.String[])
+comment2.params=idade peso
+comment2.target=void exibirMensagem(int, double)
+numComments=3
