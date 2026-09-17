@@ -1,0 +1,26 @@
+Em phyton me faça uma aplicação de gerenciamento de notas de aluno com menu e submenu com as seguintes propostas:
+Menu sera com 
+1- Cadastrar alunos e notas
+2 - Listagem alunos
+3 - Calcular e exibir media geral da turma
+4 - Maior e menor nota registrada
+5 - Mostrar alunos aprovados (média 7=>)
+6 - Abrir submenu
+0 - Encerrar aplicação
+
+SUBMENU COM FUNÇÕES EXTRAS: 
+1 - Mostrar turma em ordem alfabética com nomes alunos
+2 - Mostrar turma com ordem descrescente de notas
+3 - Mostrar turma com ordem crescente de notas
+4 - Mostrar alunos reprovador ( nota <7 )
+5 - Listar alunos com notas de x a y. Exemplo: Alunos que tiraram de 7 até 8
+6 - Desvio padrão. Pegar a nota de um aluno e ver a diferença da nota da média da turma.Ex: media 7 e o aluno tirou 6. Desvio -1
+Requisito não funcional:
+Validar nome com letras e notas com números
+
+Nesse código é para conter: 
+Laços de repetição
+Vetores paralelo
+Funções  e modularização
+Recursividade
+Comentários //
