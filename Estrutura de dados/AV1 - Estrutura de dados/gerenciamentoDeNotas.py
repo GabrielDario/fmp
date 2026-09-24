@@ -7,9 +7,6 @@
 nomes = []
 notas = []
 
-# ------------------------------------------------------------------------------
-# FUNÇÕES DE VALIDAÇÃO (Requisitos Não Funcionais)
-# ------------------------------------------------------------------------------
 
 def validar_nome(mensagem):
     # Garante que o nome contenha apenas letras e espaços e não seja vazio
@@ -32,8 +29,7 @@ def validar_nota(mensagem):
             print("Opção invalida: Digite apenas números.")
 
 # ------------------------------------------------------------------------------
-# FUNÇÕES RECURSIVAS (Mínimo 2 funções recursivas)
-# ------------------------------------------------------------------------------
+# FUNÇÕES RECURSIVAS 
 
 def somar_notas_recursivo(vetor_notas, indice=0):
     #  Função Recursiva 1: Soma recursivamente todas as notas do vetor
@@ -56,11 +52,9 @@ def buscar_por_intervalo_recursivo(vetores_paralelos, min_val, max_val, indice=0
     return resultado_atual + buscar_por_intervalo_recursivo(vetores_paralelos, min_val, max_val, indice + 1)
 
 # ------------------------------------------------------------------------------
-# FUNÇÕES PRINCIPAIS E MODULARIZAÇÃO (Mínimo 6 funções)
-# ------------------------------------------------------------------------------
+# FUNÇÕES PRINCIPAIS E MODULARIZAÇÃO 
 
 def cadastrar_aluno():
-    # Função 1: Cadastra um aluno e sua nota nos vetores paralelos
     nome = validar_nome("Digite o nome do aluno: ")
     nota = validar_nota("Digite a nota do aluno (0 a 10): ")
     
@@ -69,7 +63,6 @@ def cadastrar_aluno():
     print(f"Aluno {nome} cadastrado com sucesso!")
 
 def listar_alunos():
-    # Função 2: Exibe todos os alunos e suas respectivas notas
     if not nomes:
         print("Nenhum aluno cadastrado.")
         return
@@ -78,14 +71,12 @@ def listar_alunos():
         print(f"Aluno: {nomes[i]} | Nota: {notas[i]:.2f}")
 
 def calcular_media_geral():
-    # Função 3: Calcula e retorna a média da turma usando a função recursiva de soma
     if not notas:
         return 0.0
     soma_total = somar_notas_recursivo(notas)
     return soma_total / len(notas)
 
 def exibir_maior_menor_nota():
-    # Função 4: Identifica e mostra a maior e a menor nota cadastrada
     if not notas:
         print("Nenhum aluno cadastrado.")
         return
@@ -95,7 +86,6 @@ def exibir_maior_menor_nota():
     print(f"Menor nota registrada: {menor:.2f}")
 
 def mostrar_aprovados():
-    # Função 5: Exibe alunos com nota maior ou igual a 7.0
     if not nomes:
         print("Nenhum aluno cadastrado.")
         return
@@ -109,7 +99,6 @@ def mostrar_aprovados():
         print("Nenhum aluno aprovado.")
 
 def mostrar_reprovados():
-    # Função 6: Exibe alunos com nota menor que 7.0
     if not nomes:
         print("Nenhum aluno cadastrado.")
         return
@@ -128,7 +117,6 @@ def ordenar_e_exibir(por_nome=False, decrescente=False):
         print("Nenhum aluno cadastrado.")
         return
     
-    # Agrupa os vetores paralelos em pares (nome, nota) para ordenação correta
     dados = list(zip(nomes, notas))
     
     if por_nome:
