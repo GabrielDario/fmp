@@ -1,0 +1,66 @@
+Em java,como aluno de ADS - fazer um sistema de gerenciamento de locação de veiculos com seguintes requisitos:
+relação entre classes,herança, polimorfismo, sobrescrita,sobrecarga,sistema de estruturas de seleção,repetição e arrays.
+
+Classes Veiculos
+- modelo
+- marca
+- ano
+- placa
+- disponivel(boleano)
+
+Cliente
+- nome
+- cpf
+- idade
+Um cliente pode alugar vários carros mas um veículo so pode ser alugado por um cliente por vez
+
+Criar construturoes,getters e setters e metodos necessários para gerenciar a associação entre veículos e cliente.
+
+implemente o método exibirDetalhes() na classe veiculo que exibe informações do veículo e status da disponibidade
+
+criar subclasses como carro,moto e caminhão partindo do veículos
+- Carro tem um atributo adicional nPortas(número de portas).
+- Moto tem um atributo adicional cilindradas
+- Caminhão tem cargaMaxixa
+Implementar os método exibirInformações em veiculos e sobrescreva esse metodo nas subclasses
+para exibir as informações especificas para cada veículo
+Instrução:
+* Utilize herar para evitar duplicidade
+* Utilize polimorfirmos para tratar diferentes tipos de veículos.
+
+Sobrecarga de método:
+implementar classe Locadora
+- Implementar o método realizarLocação() como sobrecarga para lidar com diferentes cenários.
+     -locação para pessoas físicas com contratos de 7 dias
+     - Locação para empresas,com contratos de 15 dias.
+     - Locação sem contratos especificos (sem prazo definido)
+Instrução: 
+utilize sobrecarga para criar versões do método realizarLocação() que aceitam diferentes parÂmetros(prazo de locação,tipo de cliente)
+
+Ter um método principal(main) que permita o usuario
+- Cadastrar um novo veículo
+- Cadastrar um novo cliente
+- Realizar uma locação
+- Verificar lista de veículos disponivel
+- Consultar veiculos alugados e devoluçoes pendentes
+Instrução:
+Utilizar while para manter o programa até o usuário escolher sair 0
+
+Sobre arrays unidimensional e bidimensional:
+- Unidimensional : array que armazena os 20 veiculos cadastrados.Um array para armezenar os carros.Quando o limite for 20 veiculos for alcançada exibe uma mensagem informando capacidade excedida e não deixar cadastrar mais.
+* Implementar um método que percorra o array e exiba todos os veículos cadastrados
+
+- Bidimensional: Para reprensentar o histórico de locações.Cada linha representará um cliente e cada coluna um veiculo. O valor na célula1 se o cliente alugou o veículo e 0 para não alugou.
+* Criar um método que exiba o histórico de locações para cada cliente
+
+Calculos de multas
+ - Criar um método calcularMulta() na classe Locadora.A multa calcula com base nos número de dias.
+    - Carros R$ 50,00 por dia
+    - Motos R$ 50,00 por dia
+    - Caminhões R$ 50,00 por dia
+* O método deve receber o número de dias e o tipo do veículo para calcular a multa
+
+no Main método calcularMulta()
+gostaria de verificar se é carro,moto ou caminhão e fazer um calculo especifico para da tipo de veiculo.
+
+ 
