@@ -1,0 +1,29 @@
+#BlueJ class context
+#Sun Oct 04 21:58:42 BRT 2026
+comment0.target=Aluno
+comment1.target=Curso getCurso()
+comment10.target=java.lang.String getEmail()
+comment11.params=email
+comment11.target=void setEmail(java.lang.String)
+comment12.target=java.lang.String getSenha()
+comment13.params=senha
+comment13.target=void setSenha(java.lang.String)
+comment14.target=void exibeDados()
+comment15.params=indice nota
+comment15.target=void lancarNota(int, double)
+comment16.target=double calcularMedia()
+comment17.target=void exibirNotas()
+comment2.params=curso
+comment2.target=void setCurso(Curso)
+comment3.params=codigo nome dataNascimento email senha
+comment3.target=Aluno(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+comment4.target=int getCodigo()
+comment5.params=codigo
+comment5.target=void setCodigo(int)
+comment6.target=java.lang.String getNome()
+comment7.params=nome
+comment7.target=void setNome(java.lang.String)
+comment8.target=java.lang.String getDataNascimento()
+comment9.params=dataNascimento
+comment9.target=void setDataNascimento(java.lang.String)
+numComments=18

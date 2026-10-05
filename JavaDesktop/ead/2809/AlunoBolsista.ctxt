@@ -1,0 +1,10 @@
+#BlueJ class context
+#Sun Oct 04 21:58:47 BRT 2026
+comment0.target=AlunoBolsista
+comment1.params=codigo nome dataNascimento email senha tipoBolsa
+comment1.target=AlunoBolsista(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+comment2.target=java.lang.String getTipoBolsa()
+comment3.params=tipoBolsa
+comment3.target=void setTipoBolsa(java.lang.String)
+comment4.target=void exibeDados()
+numComments=5

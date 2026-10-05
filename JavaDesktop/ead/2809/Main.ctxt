@@ -1,0 +1,22 @@
+#BlueJ class context
+#Sun Oct 04 23:25:08 BRT 2026
+comment0.target=Main
+comment1.params=args
+comment1.target=void main(java.lang.String[])
+comment2.params=scanner listaAlunos
+comment2.target=void cadastrarAluno(java.util.Scanner, ListaDeAlunos)
+comment3.params=scanner listaAlunos
+comment3.target=void cadastrarBolsista(java.util.Scanner, ListaDeAlunos)
+comment4.params=scanner cursos quantidadeCursos
+comment4.target=int cadastrarCurso(java.util.Scanner, Curso[], int)
+comment5.params=scanner listaAlunos cursos quantidadeCursos
+comment5.target=void associarAlunoCurso(java.util.Scanner, ListaDeAlunos, Curso[], int)
+comment6.params=cursos quantidadeCursos
+comment6.target=void listarApenasCursos(Curso[], int)
+comment7.params=cursos quantidadeCursos listaAlunos
+comment7.target=void listarCursos(Curso[], int, ListaDeAlunos)
+comment8.params=scanner listaAlunos
+comment8.target=void lancarNotas(java.util.Scanner, ListaDeAlunos)
+comment9.params=scanner listaAlunos
+comment9.target=void consultarNotas(java.util.Scanner, ListaDeAlunos)
+numComments=10
