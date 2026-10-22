@@ -1,5 +1,7 @@
 Lista duplamente encadeadas e circulares.
 
+Atividade 1 -
+
 1. Quais referências mudam quando a nova página é inserida?
 R: Se a lista estiver vazia: inicio, fim e atual passam a apontar para o novo nó.Anterior e proximo = none.
 Se inserida a partir da página atual (atual existe):
@@ -13,3 +15,31 @@ R: Em um navegador real, ao voltar 2 páginas e acessar um site novo, a linha do
 
 3.Quando inicio, fim e atual apontam para o mesmo nó?
 R: Quando o histórico possui exatamente uma página (uma única URL visitada na sessão).
+
+-------------------------------------------------------------------------------------------------------------
+Atividade 2 -
+Antes de programar
+1. Quantas ligações podem mudar ao remover um nó do meio?
+R:Podem mudar até 4 ligações (referências de ponteiro) no total:
+- anterior.proximo: O ponteiro de próximo do nó anterior passa a apontar para o nó seguinte.
+- proximo.anterior: O ponteiro de anterior do nó seguinte passa a apontar para o nó anterior.
+- no_removido.proximo: É limpo (None) para isolar o nó removido da lista e evitar vazamento de memória/referências cruzadas.
+- no_removido.anterior: Também é limpo (None) pelo mesmo motivo.
+
+2. Como reconhecer a remoção da primeira ou da última música?
+Primeira música (inicio):
+O nó a ser removido possui anterior == None (ou no == self.inicio).
+Tratamento: O ponteiro self.inicio da lista deve ser atualizado para apontar para no.proximo.
+
+Última música (fim):
+O nó a ser removido possui proximo == None (ou no == self.fim).
+Tratamento: O ponteiro self.fim da lista deve ser atualizado para apontar para no.anterior.
+
+Única música na playlist:
+O nó possui tanto anterior == None quanto proximo == None (ou self.inicio == self.fim == no).
+Tratamento: Ambos os ponteiros da lista (self.inicio e self.fim) passam a ser None.
+
+3. Por que mover um nó não exige copiar todos os seus dados?
+Porque a lista encadeada trabalha com alocação dinâmica por referências (endereços de memória) e não por cópia física de valores.
+Ao mover uma música (por exemplo, transferir o nó do final para o início), todos os seus atributos (codigo, titulo, artista, duracao) continuam intactos no mesmo objeto na memória.
+Você só precisa desconectar 2 ou 3 ponteiros de onde o nó está atualmente e reconectar esses ponteiros no início da lista
