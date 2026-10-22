@@ -1,0 +1,15 @@
+Lista duplamente encadeadas e circulares.
+
+1. Quais referências mudam quando a nova página é inserida?
+R: Se a lista estiver vazia: inicio, fim e atual passam a apontar para o novo nó.Anterior e proximo = none.
+Se inserida a partir da página atual (atual existe):
+O novo nó passa a ter anterior = atual e proximo = None.
+atual.proximo passa a apontar para o novo nó.
+Como a navegação descarta as páginas à frente ao visitar uma nova URL, o novo nó torna-se o novo fim da lista.
+O ponteiro atual é atualizado para o novo nó.
+
+2.Por que o histórico à frente deve ser removido após uma nova navegação?
+R: Em um navegador real, ao voltar 2 páginas e acessar um site novo, a linha do tempo "ramifica". O navegador adota a convenção de descartar as páginas futuras da sessão antiga para manter o histórico estritamente linear em relação à nova sequência de navegação.
+
+3.Quando inicio, fim e atual apontam para o mesmo nó?
+R: Quando o histórico possui exatamente uma página (uma única URL visitada na sessão).
