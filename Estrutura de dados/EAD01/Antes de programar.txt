@@ -27,19 +27,96 @@ R:Podem mudar até 4 ligações (referências de ponteiro) no total:
 - no_removido.anterior: Também é limpo (None) pelo mesmo motivo.
 
 2. Como reconhecer a remoção da primeira ou da última música?
-Primeira música (inicio):
+R:Primeira música (inicio):
 O nó a ser removido possui anterior == None (ou no == self.inicio).
 Tratamento: O ponteiro self.inicio da lista deve ser atualizado para apontar para no.proximo.
 
 Última música (fim):
-O nó a ser removido possui proximo == None (ou no == self.fim).
+R:O nó a ser removido possui proximo == None (ou no == self.fim).
 Tratamento: O ponteiro self.fim da lista deve ser atualizado para apontar para no.anterior.
 
 Única música na playlist:
-O nó possui tanto anterior == None quanto proximo == None (ou self.inicio == self.fim == no).
+R:O nó possui tanto anterior == None quanto proximo == None (ou self.inicio == self.fim == no).
 Tratamento: Ambos os ponteiros da lista (self.inicio e self.fim) passam a ser None.
 
 3. Por que mover um nó não exige copiar todos os seus dados?
 Porque a lista encadeada trabalha com alocação dinâmica por referências (endereços de memória) e não por cópia física de valores.
 Ao mover uma música (por exemplo, transferir o nó do final para o início), todos os seus atributos (codigo, titulo, artista, duracao) continuam intactos no mesmo objeto na memória.
 Você só precisa desconectar 2 ou 3 ponteiros de onde o nó está atualmente e reconectar esses ponteiros no início da lista
+-------------------------------------------------------------------------------------------------------------
+Atividade 3 -
+1. Como comparar data e horário para encontrar a posição?
+Como os formatos adotados são padronizados (AAAA-MM-DD para data e HH:MM para horário), podemos comparar diretamente as cadeias de texto (strings) ou usar uma tupla em Python:
+Em Python: A comparação entre tuplas (data1, horario1) < (data2, horario2) compara primeiro a data. Se as datas forem iguais, desempata pelo horário.
+2. Quais ponteiros mudam quando o atendimento entra no meio?
+R:
+-----------------
+3. Por que o percurso inverso ajuda a testar a estrutura?
+R:O percurso inverso (do fim para o inicio usando o ponteiro anterior) é fundamental para validar a integridade dos ponteiros de volta:Detecta ponteiros quebrados/nulos: Se ao inserir ou reagendar um nó esquecermos de atualizar o ponteiro anterior (por exemplo, deixando B.anterior apontando para $A$ em vez de $N$), a listagem direta funcionará normalmente, mas a listagem inversa pulará nós ou causará um erro de ponteiro nulo (NullPointerException / Segmentation Fault).Valida o ponteiro fim: Garante que a referência da cauda da lista está realmente apontando para o último elemento cronológico.
+-------------------------------------------------------------------------------------------------------------
+Atividade 4 - 
+1. Qual condição indica que uma volta completa terminou?
+R:A volta completa termina quando o ponteiro auxiliar de navegação retorna ao ponto de partida (aux.proximo == inicio ao inspecionar o próximo nó, ou quando aux == inicio após ter avançado pelo menos uma vez a partir do início).2. O que deve acontecer com fim-&gt;prox quando inicio muda?
+R:O ponteiro fim.proximo deve ser imediatamente atualizado para apontar para o novo nó inicio, preservando o invariante da lista circular de que o último nó sempre aponta para o primeiro.
+3. Como atualizar atual quando o jogador atual é removido?
+R:O ponteiro atual deve ser redefinido para o nó imediatamente posterior ao jogador removido (no_removido.proximo). Caso o jogador removido fosse o único restante na lista, atual passa a ser None.
+-------------------------------------------------------------------------------------------------------------
+Atividade 5 - 
+1. Qual será o próximo processo depois de P3?
+R:
+2. Que referências mudam quando o processo atual termina?
+R:
+3. Como evitar acessar um nó depois de liberá-lo em C?
+R:
+-------------------------------------------------------------------------------------------------------------
+Atividade 6 - 
+
+-------------------------------------------------------------------------------------------------------------
+Lista de exercícios sobre pilhas
+
+Atividade 1 - 
+1. Por que a ação mais recente deve ser removida primeiro?
+R:
+2. Quais referências mudam durante push e pop?
+R:
+3. O que deve acontecer com topo após remover o único elemento?
+R:
+-------------------------------------------------------------------------------------------------------------
+Atividade 2 - 
+1. Por que apenas contar aberturas e fechamentos não é suficiente?
+R:
+
+2. O que significa encontrar um fechamento com a pilha vazia?
+R: 
+3. Por que a pilha deve estar vazia ao final?
+R:
+-------------------------------------------------------------------------------------------------------------
+Atividade 3 -
+1. Por que não é correto remover diretamente uma caixa do meio?
+R:
+2. Qual é a ordem dos elementos na pilha auxiliar?
+R: 
+3. Como garantir que a pilha original mantenha a mesma ordem após a busca?
+R:
+-------------------------------------------------------------------------------------------------------------
+Atividade 4 -
+1. Onde entra um novo chamado e por onde sai o próximo?
+R: 
+2. O que ocorre com fim quando o último chamado é removido?
+3. Por que remover pelo final quebraria a regra FIFO?
+R:
+-------------------------------------------------------------------------------------------------------------
+Atividade 5 -
+1. Quando cancelar um trabalho exige atualizar fim?
+R:
+2. Por que uma busca não deve mover os trabalhos?
+R:
+3. Como identificar que a fila ficou vazia?
+-------------------------------------------------------------------------------------------------------------
+Atividade 6 -
+1. Qual pedido será processado depois de P3?
+R:
+2. O que acontece com fim-&gt;prox quando inicio muda?
+R: 
+3. Como listar uma volta completa sem entrar em loop infinito?
+-------------------------------------------------------------------------------------------------------------
