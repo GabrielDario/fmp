@@ -63,11 +63,18 @@ R:O ponteiro atual deve ser redefinido para o nó imediatamente posterior ao jog
 -------------------------------------------------------------------------------------------------------------
 Atividade 5 - 
 1. Qual será o próximo processo depois de P3?
-R:
+R:O próximo processo após P3 será o primeiro processo da lista circular (por exemplo, P1). Por definição de uma lista circular simples, o último nó aponta de volta para o início, formando um ciclo contínuo de execução.
 2. Que referências mudam quando o processo atual termina?
-R:
+R:atual.proximo, "pulando" e isolando o nó que está sendo removido.
+self.inicio: Se o processo removido for o próprio nó inicial da lista, o ponteiro de início é atualizado para atual.proximo (o novo primeiro elemento).
+O último nó da lista: Mantém sua referência apontando para o novo self.inicio para preservar a invariante da circularidade.
 3. Como evitar acessar um nó depois de liberá-lo em C?
-R:
+R:Em C, após liberar um nó com a função free(), o ponteiro se torna um dangling pointer (aponta para um endereço de memória que já foi liberado). Para evitar acessá-lo por engano:
+Atribua NULL imediatamente ao ponteiro logo após desalocá-lo:
+C
+free(no);
+no = NULL;
+Sempre valide o ponteiro antes de realizar qualquer operação de leitura ou escrita (ex: if (no != NULL)).
 -------------------------------------------------------------------------------------------------------------
 Atividade 6 - 
 
@@ -76,28 +83,28 @@ Lista de exercícios sobre pilhas
 
 Atividade 1 - 
 1. Por que a ação mais recente deve ser removida primeiro?
-R:
+R:Porque a ordem de aninhamento importa. Expressões como ([)] possuem a mesma quantidade de símbolos de abertura e fechamento, mas estruturalmente estão incorretas porque os delimitadores se cruzam.
 2. Quais referências mudam durante push e pop?
-R:
+R:Significa que há um caractere de fechamento que apareceu antes de qualquer abertura correspondente (ex: )a+b( ou a+b)), indicando erro sintático imediato.
 3. O que deve acontecer com topo após remover o único elemento?
-R:
+R:Garante que todos os delimitadores abertos durante a leitura da expressão foram devidamente fechados. Se a pilha contiver elementos ao final, significa que houve aberturas sem fechamento correspondente (ex: ((a+b)).
 -------------------------------------------------------------------------------------------------------------
 Atividade 2 - 
 1. Por que apenas contar aberturas e fechamentos não é suficiente?
-R:
+R:Porque a ordem de aninhamento importa. Expressões como ([)] possuem a mesma quantidade de símbolos de abertura e fechamento, mas estruturalmente estão incorretas porque os delimitadores se cruzam.S
 
 2. O que significa encontrar um fechamento com a pilha vazia?
-R: 
+R: Significa que há um caractere de fechamento que apareceu antes de qualquer abertura correspondente (ex: )a+b( ou a+b)), indicando erro sintático imediato.
 3. Por que a pilha deve estar vazia ao final?
-R:
+R:Garante que todos os delimitadores abertos durante a leitura da expressão foram devidamente fechados. Se a pilha contiver elementos ao final, significa que houve aberturas sem fechamento correspondente (ex: ((a+b)).
 -------------------------------------------------------------------------------------------------------------
 Atividade 3 -
 1. Por que não é correto remover diretamente uma caixa do meio?
-R:
+R:Porque a estrutura de pilha impõe acesso restrito exclusivamente ao topo. Remover do meio violaria o modelo LIFO e quebraria a integridade física/lógica do encadeamento linear sem manipular o topo.
 2. Qual é a ordem dos elementos na pilha auxiliar?
-R: 
+R: A ordem fica invertida em relação aos elementos retirados da pilha principal (já que uma pilha inverte a ordem ao transferir itens), mas essa inversão é temporária e necessária para alcançar o elemento desejado.
 3. Como garantir que a pilha original mantenha a mesma ordem após a busca?
-R:
+R:Desempilhando os itens da pilha original para a pilha auxiliar até localizar o alvo, removendo o alvo, e em seguida desempilhando de volta todos os itens da pilha auxiliar para a pilha original.
 -------------------------------------------------------------------------------------------------------------
 Atividade 4 -
 1. Onde entra um novo chamado e por onde sai o próximo?
