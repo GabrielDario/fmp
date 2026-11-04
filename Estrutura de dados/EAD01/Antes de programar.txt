@@ -108,22 +108,17 @@ R:Desempilhando os itens da pilha original para a pilha auxiliar até localizar 
 -------------------------------------------------------------------------------------------------------------
 Atividade 4 -
 1. Onde entra um novo chamado e por onde sai o próximo?
-R: 
+R: Um novo chamado entra sempre no final da fila (fim/rear) através da operação enqueue, e o próximo chamado a ser atendido sai pelo início da fila (inicio/front) através da operação dequeue.
 2. O que ocorre com fim quando o último chamado é removido?
+R:Quando o último elemento é retirado, tanto o ponteiro inicio quanto o ponteiro fim devem ser atualizados para None, indicando que a fila está totalmente vazia.
 3. Por que remover pelo final quebraria a regra FIFO?
-R:
+R:Porque FIFO significa First-In, First-Out (Primeiro a Entrar, Primeiro a Sair). Remover do final faria com que o atendimento priorizasse os chamados mais recentes em vez dos mais antigos, transformando a estrutura em uma Pilha (LIFO).
 -------------------------------------------------------------------------------------------------------------
 Atividade 5 -
 1. Quando cancelar um trabalho exige atualizar fim?
-R:
+R:Quando o trabalho cancelado for o último elemento da fila (ou seja, quando atual == self.fim), o ponteiro fim deve ser atualizado para apontar para o penúltimo nó da fila.
 2. Por que uma busca não deve mover os trabalhos?
-R:
+R: Porque a busca é estritamente uma operação de leitura/consulta. Mover os nós destruiria a ordem cronológica de chegada (FIFO), corrompendo a lógica do gerenciador de impressão.
 3. Como identificar que a fila ficou vazia?
--------------------------------------------------------------------------------------------------------------
-Atividade 6 -
-1. Qual pedido será processado depois de P3?
-R:
-2. O que acontece com fim-&gt;prox quando inicio muda?
-R: 
-3. Como listar uma volta completa sem entrar em loop infinito?
--------------------------------------------------------------------------------------------------------------
+R:Quando o ponteiro inicio (front) passa a ser None após a remoção ou cancelamento do último elemento remanescente.
+
