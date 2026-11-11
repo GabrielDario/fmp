@@ -12,7 +12,7 @@ public class Login extends javax.swing.JFrame {
 
    
     public void iniciarComponentes(){
-        BlackBackground = new javax.swing.JPanel();
+         BlackBackground = new javax.swing.JPanel();
         Usuario = new javax.swing.JLabel();
         Login1 = new javax.swing.JLabel();
         Senha = new javax.swing.JLabel();
@@ -130,6 +130,7 @@ public class Login extends javax.swing.JFrame {
         fundoLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BlackBackground.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -199,28 +200,12 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        getContentPane().add(BlackBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, -1, -1));
+
         fundoLogo.setBackground(new java.awt.Color(0, 0, 0));
         fundoLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/barbearia100/View/imagens/logo1.jpg"))); // NOI18N
         fundoLogo.setVerifyInputWhenFocusTarget(false);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(fundoLogo))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(270, 270, 270)
-                .addComponent(BlackBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fundoLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(BlackBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(fundoLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
